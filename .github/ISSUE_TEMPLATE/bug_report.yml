@@ -1,1 +1,46 @@
-blank_issues_enabled: false
+name: 🐛 Bug report
+description: Something does not work as it should
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the report! The more details, the faster the fix.
+  - type: input
+    id: mod-version
+    attributes:
+      label: CrypTale version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: server-version
+    attributes:
+      label: Hytale server version
+      placeholder: "0.7.6"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, what you got instead.
+    validations:
+      required: true
+  - type: input
+    id: dungeon
+    attributes:
+      label: Dungeon settings
+      description: Tier, rooms x floors, mode, and the seed shown in chat (same seed = same dungeon).
+      placeholder: "Elite, 8x2, Hardcore, seed -123456789"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Server log
+      description: The lines around the error, if any (lines starting with "CrypTale").
+      render: text
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or video
+      description: Drag and drop them here.
